@@ -1,0 +1,50 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Debug",
+            "command": "mpicc",
+            "args": [
+                "-Wall",
+                "-o",
+                "Debug",
+                "main.c",
+                "matrix.c",
+                "bitset.c",
+                "mergeTool.c",
+                "tempMatrix.c",
+                "-O0",
+                "-g"
+            ],
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "taskName": "Release",
+            "command": "mpicc",
+            "args": [
+                "-m64",
+                "-flto",
+                "-Wall",
+                "-Ofast",
+                "-march=haswell",
+                "-funroll-loops",
+                "-o",
+                "Release",
+                "main.c",
+                "matrix.c",
+                "bitset.c",
+                "mergeTool.c",
+                "tempMatrix.c"
+            ],
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

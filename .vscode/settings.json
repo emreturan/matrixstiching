@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.associations": {
+        "mpi.h": "c",
+        "stdio.h": "c",
+        "matrix.h": "c",
+        "string.h": "c",
+        "time.h": "c",
+        "stdio2.h": "c",
+        "libio.h": "c"
+    }
+}
